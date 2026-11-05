@@ -21,26 +21,46 @@ int main()
     if (operateur == '+')
     {
         printf("addition\n");
+        int resultat = nombre_1 + nombre_2;
     }
     else if (operateur == '-')
     {
         printf("soustraction\n");
+        int resultat = nombre_1 - nombre_2;
     }
     else if (operateur == '*')
     {
         printf("multiplication\n");
+        int resultat = nombre_1 * nombre_2;
     }
     else if (operateur == '/')
     {
-        printf("division\n");
+        if (nombre_2 == 0)
+        {
+            printf("Impossible de diviser par 0\n");
+        }
+        else
+        {
+            printf("division\n");
+            float resultat = (float)nombre_1 / nombre_2;
+        }
     }
     else if (operateur == '%')
     {
-        printf("modulo\n");
+        if (nombre_2 == 0)
+        {
+            printf("Impossible de diviser par 0\n");
+        }
+        else
+        {
+            printf("modulo\n");
+            int resultat = nombre_1 % nombre_2;
+        }
     }
     else
     {
         printf("Opérateur non reconnu\n");
     }
+
     return 0;
 }
